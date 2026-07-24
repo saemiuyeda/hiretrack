@@ -22,6 +22,6 @@ Cada candidatura poderá conter:
 - Vaga;
 - Empresa;
 - Status;
-- Plataforma/Canal;
+- Fonte;
 - Data de candidatura;
 
