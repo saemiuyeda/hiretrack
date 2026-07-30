@@ -39,6 +39,10 @@ RN007: O status de uma candidatura deve pertencer à lista de status permitidos 
 
 RN008: O sistema permite alterar uma candidatura para qualquer status válido. O MVP não estabelece uma sequência obrigatória entre os status.
 
+RN009: Toda candidatura deve possuir um identificador único.
+
+RN010: A data de cadastro deve ser registrada automaticamente no momento em que a candidatura é criada.
+
 Status permitidos:
 
 - Inscrição
