@@ -19,7 +19,7 @@ Não se aplica.
     1. Vaga
     2. Empresa
     3. Status
-    4. Plataforma/Canal
+    4. Plataforma/Canal (opcional)
     5. Data de candidatura
 3. O usuário preenche as informações solicitadas.
 4. O usuário envia o formulário de cadastro.
@@ -62,8 +62,8 @@ Relacionado ao passo 5.
 
 Fluxo:
 
-1. O sistema identifica que a data informada é inválida.
-2. O sistema informa o formato esperado.
+1. O sistema identifica que a data informada é inválida ou futura.
+2. O sistema informa ao usuário o motivo da invalidação.
 3. O usuário informa uma nova data.
 4. O fluxo retorna ao passo 4 do fluxo básico.
 

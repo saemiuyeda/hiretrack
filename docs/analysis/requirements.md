@@ -2,11 +2,11 @@
 
 ## Requisitos Funcionais
 
-RF001: O sistema deve permitir cadastrar uma candidatura, informando a vaga, empresa, status, plataforma/canal e data de candidatura.
+RF001: O sistema deve permitir cadastrar uma candidatura, informando a vaga, empresa, status e data de candidatura.
 
 RF002: O sistema deve permitir listar as candidaturas cadastradas.
 
-RF003: O sistema deve permitir editar todas as informações de uma candidatura cadastrada.
+RF003: O sistema deve permitir editar todas as informações editáveis de uma candidatura cadastrada.
 
 RF004: O sistema deve permitir excluir uma candidatura cadastrada.
 
