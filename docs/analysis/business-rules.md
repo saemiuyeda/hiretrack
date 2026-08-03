@@ -41,6 +41,8 @@ RN008: Toda candidatura deve possuir um identificador único.
 
 RN009: A data de cadastro deve ser registrada automaticamente no momento em que a candidatura é criada.
 
+RN010: Uma candidatura não pode ser criada se já existe uma candidatura para a mesma vaga na mesma empresa.
+
 Status permitidos:
 
 - Inscrição
