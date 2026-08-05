@@ -1,7 +1,7 @@
 from datetime import date
 from sqlalchemy.sql import exists
 from sqlalchemy.orm import Session
-from ..schemas.applications_request import Item
+from ..schemas.applications_request import ApplicationRequest
 from ..models.application import Application
 from ..domain.exceptions import InvalidApplicationDate, ApplicationAlreadyExists, DatabaseError
 
@@ -9,7 +9,7 @@ class ApplicationService():
     def __init__(self, db: Session):
          self.db = db
 
-    def create_application(self, application_data: Item):
+    def create_application(self, application_data: ApplicationRequest):
         if application_data.applied_date > date.today():
              raise InvalidApplicationDate("The application date cannot be in the future.")
 

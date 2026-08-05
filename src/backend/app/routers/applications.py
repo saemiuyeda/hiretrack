@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from ..database.connection import get_db
-from ..schemas.applications_request import Item
+from ..schemas.applications_request import ApplicationRequest
 from ..services.applications import ApplicationService
 from ..domain.exceptions import InvalidApplicationDate, ApplicationAlreadyExists, DatabaseError
 
 router = APIRouter(prefix="/applications", tags=["Applications"])
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
-def create_application(item: Item, db: Session = Depends(get_db)):
+def create_application(item: ApplicationRequest, db: Session = Depends(get_db)):
     try:
         service = ApplicationService(db=db)
         new_application = service.create_application(application_data=item)
