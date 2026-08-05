@@ -1,7 +1,7 @@
 from datetime import date
 from sqlalchemy.sql import exists
 from sqlalchemy.orm import Session
-from ..schemas.applications import Item
+from ..schemas.applications_request import Item
 from ..models.application import Application
 from ..domain.exceptions import InvalidApplicationDate, ApplicationAlreadyExists, DatabaseError
 

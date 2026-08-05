@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from ..database.connection import get_db
-from ..schemas.applications import Item
+from ..schemas.applications_request import Item
 from ..services.applications import ApplicationService
 from ..domain.exceptions import InvalidApplicationDate, ApplicationAlreadyExists, DatabaseError
 
