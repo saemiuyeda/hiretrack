@@ -1,4 +1,4 @@
-import enum
+from ..domain.application_status import ApplicationStatus
 import uuid
 from datetime import datetime, date
 from sqlalchemy import Uuid, DateTime, Enum, Date, func
@@ -7,16 +7,6 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 class Base(DeclarativeBase):
     pass
-
-class ApplicationStatus(enum.Enum):
-    APPLICATION = "Inscrição"
-    SCREENING = "Triagem"
-    RH_INTERVIEW = "Entrevista RH"
-    TECHNICAL_INTERVIEW = "Entrevista Técnica"
-    OFFER = "Proposta"
-    HIRED = "Contratada"
-    REJECTED = "Rejeitada"
-    CANCELLED = "Cancelada"
 
 class Application(Base):
     __tablename__ = "applications"
