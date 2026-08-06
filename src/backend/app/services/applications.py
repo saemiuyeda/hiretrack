@@ -1,15 +1,15 @@
 from datetime import date
-from sqlalchemy.sql import exists
+from sqlalchemy.sql import exists, select
 from sqlalchemy.orm import Session
-from ..schemas.applications import Item
+from ..schemas.applications_request import ApplicationRequest
 from ..models.application import Application
 from ..domain.exceptions import InvalidApplicationDate, ApplicationAlreadyExists, DatabaseError
 
 class ApplicationService():
-    def __init__(self, db: Session):
+     def __init__(self, db: Session):
          self.db = db
 
-    def create_application(self, application_data: Item):
+     def create_application(self, application_data: ApplicationRequest):
         if application_data.applied_date > date.today():
              raise InvalidApplicationDate("The application date cannot be in the future.")
 
@@ -30,3 +30,9 @@ class ApplicationService():
         except Exception as exception:
           self.db.rollback()
           raise DatabaseError(f"Error saving to the database: {str(exception)}")
+
+     def list_applications(self) -> list[Application]:
+         applications_query = select(Application)
+
+         applications_list = self.db.scalars(applications_query).all()
+         return applications_list
