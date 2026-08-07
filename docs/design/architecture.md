@@ -55,6 +55,7 @@ As responsabilidades internas serão organizadas entre:
 - **Schema:** define e valida os dados de entrada e saída da API;
 - **Service:** concentra a lógica de negócio e o processamento das operações;
 - **Model:** representa as entidades persistidas no banco de dados;
+- **Domain:** concentra elementos do domínio da aplicação;
 - **Database:** gerencia a conexão e a interação com o banco de dados.
 
 ### Banco de dados
