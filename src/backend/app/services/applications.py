@@ -1,6 +1,6 @@
 from datetime import date
 from uuid import UUID
-from sqlalchemy.sql import exists, select, delete
+from sqlalchemy.sql import exists, select
 from sqlalchemy.orm import Session
 from ..schemas.applications_request import ApplicationRequest
 from ..schemas.applications_update_request import ApplicationUpdateRequest
