@@ -6,3 +6,6 @@ class ApplicationAlreadyExists(Exception):
 
 class DatabaseError(Exception):
     pass
+
+class ApplicationDoesNotExist(Exception):
+    pass
