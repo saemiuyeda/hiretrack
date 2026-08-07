@@ -69,3 +69,19 @@ def edit_application(application_id: UUID, updated_data: ApplicationUpdateReques
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=str(error)
         )
+
+@router.delete("/{application_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_application(application_id: UUID, db: Session = Depends(get_db)):
+    try:
+        service = ApplicationService(db=db)
+        service.delete_application(application_id)
+    except ApplicationDoesNotExist as error:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error)
+            )
+    except DatabaseError as error:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(error)
+            )
