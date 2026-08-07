@@ -93,7 +93,7 @@ Não possui.
 
 ## Atualizar candidatura
 
-### PATCH `/applications/{id}`
+### PATCH `/applications/{application_id}`
 
 Responsável por atualizar parcialmente uma candidatura existente.
 
@@ -193,7 +193,7 @@ Sem corpo de resposta.
 | --- | --- | --- |
 | POST `/applications` | 201 Created | 422 Unprocessable Content |
 | GET `/applications` | 200 OK | — |
-| PATCH `/applications/{id}` | 200 OK | 404 Not Found<br>422 Unprocessable Content |
+| PATCH `/applications/{id}` | 200 OK | 404 Not Found | 422 Unprocessable Content | 500 Internal Server Error
 | DELETE `/applications/{id}` | 204 No Content | 404 Not Found |
 
 ---
